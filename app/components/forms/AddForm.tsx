@@ -39,12 +39,12 @@ const AddForm: React.FC<AddFormProps> = () => {
         <input name='title' value={title} onChange={e => {
             setSubmitted(false)
             setTitle(e.target.value)
-        }} className="w-full mb-3 rounded-lg h-12 indent-3 focus:outline-none focus:border focus:border-[#4184F3]" type="text" placeholder="Title or Short description" />
+        }} className="w-full mb-3 rounded-lg h-12 indent-3 focus:outline-none focus:border focus:border-[#4184F3] shadow-sm"  type="text" placeholder="Title or Short description" />
         <textarea name='details' value={details} onChange={e => {
             setSubmitted(false)
             setDetails(e.target.value)
-        }} className="w-full py-2.5 h-[350px] rounded-lg indent-3 focus:outline-none focus:border focus:border-[#4184F3] mb-3" placeholder="What happened today?" />
-        <button disabled={title === "" || details === "" || loading} className="bg-[#4184F3] text-white w-24 h-12 rounded-lg flex items-center justify-center">
+        }} className="w-full shadow-sm py-2.5 h-[350px] rounded-lg indent-3 focus:outline-none focus:border focus:border-[#4184F3] mb-3" placeholder="What happened today?" />
+        <button disabled={title === "" || details === "" || loading} className="bg-[#4184F3] text-white w-24 h-12 rounded-lg flex items-center justify-center shadow-sm">
             {loading && <Loader />}
             {submitted && <CheckIcon className='h-6 w-6 text-white' />}
             {!loading && !submitted && "Add"}
