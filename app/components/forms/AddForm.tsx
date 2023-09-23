@@ -25,9 +25,9 @@ const AddForm: React.FC<AddFormProps> = () => {
             setLoading(true)
             const response = await axiosInstance.post("/api/v1/journal", data);
             setLoading(false)
-            setSubmitted(true)
             setTitle("")
             setDetails("")
+            setSubmitted(true);
         } catch (error) {
             setLoading(false)
             setSubmitted(false)

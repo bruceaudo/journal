@@ -16,17 +16,19 @@ const TopNavigation:React.FC<TopNavigationProps> = () => {
         <div>Logo</div>
         <SearchForm />
         <div className="flex gap-x-8 items-center">
+          {/** 
           <Link href={"/dashboard/settings"} className="flex items-center gap-1">
             <Cog6ToothIcon className="h-7 w-7" />
             Settings
-          </Link>
+        </Link>
+        */}
 
           <div className="flex items-center gap-1">
             <ArrowRightOnRectangleIcon className="h-7 w-7" />
             Logout
-            </div>
-            
-            <Image className='h-8 w-8 rounded-full' src={profile} alt='Profile' />
+          </div>
+
+          <Image className="h-8 w-8 rounded-full" src={profile} alt="Profile" />
         </div>
       </nav>;
 }
