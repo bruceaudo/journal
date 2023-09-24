@@ -40,7 +40,7 @@ const JournalCard: React.FC<JournalCardProps> = ({ id, title, details }) => {
   };
 
   return (
-    <div className=" bg-white rounded-lg p-5 max-h-[300px]">
+    <div className=" bg-white rounded-lg p-5 max-h-[300px] shadow-md">
       <Link href={`/dashboard/journal?id=${id}`}>
         <h2 className="font-semibold text-xl mb-2.5">
           {title}
